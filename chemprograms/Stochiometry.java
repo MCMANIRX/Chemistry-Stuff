@@ -24,9 +24,17 @@ class Main {
 	double r1 = 0;
 	  
 	Scanner s = new Scanner(System.in);
+	
+	
 				
-	print("enter mass of compound: ");
+	print("\nenter value: ");
 	value = s.nextDouble();
+	sum = 1;
+	
+	print("is this mass in (g)rams or (m)oles?\n(enter 'g' or 'm'): ");
+	
+	if(s.next().equals("g")) {
+		sum = 0;
 	
 	print("enter amount of elements in compound (if given the molar mass, type 1): ");
 	n = s.nextInt();
@@ -49,6 +57,8 @@ class Main {
 	
 	System.out.printf("moles of compound are %f mol.\n\n", (value/sum));
 	
+	} //end if
+	
 	print("enter stoichiometric ratio of product (or numerator): ");
 	r0 = s.nextInt();
 	
@@ -58,7 +68,7 @@ class Main {
   print("mols * ratio = "+((value/sum) * (r0/r1))+"\n"); 
 	
 	
-	n=0;
+	n = 0;
 	temp = 0;
 	print("enter amount of elements in compound to convert to g (if given the molar mass, type 1): ");
 	n = s.nextInt();
